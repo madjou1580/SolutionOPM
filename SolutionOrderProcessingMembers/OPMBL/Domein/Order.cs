@@ -15,7 +15,7 @@ namespace OPMBL.Domein {
         public Member Member { get; set; }
         public List<OrderLine> OrderLines { get; set; } = new();
 
-        public Order(int id, DateTime orderDate, decimal ticketPrice, Member member, IOrderStrategy strategy)
+        public Order(int id, DateTime orderDate, decimal ticketPrice, Member member)
         {
             Id = id;
             OrderDate = orderDate;
