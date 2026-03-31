@@ -11,6 +11,12 @@ namespace OPMBL.Domein {
         public decimal PricePerTicket { get; set; }
 
         public Event Event { get; set; }
+        public OrderLine(int quantity, decimal pricePerTicket, Event @event)
+        {
+            Quantity = quantity;
+            PricePerTicket = pricePerTicket;
+            Event = @event;
+        }
 
         public decimal GetSubtotal() {
             return Quantity * PricePerTicket;

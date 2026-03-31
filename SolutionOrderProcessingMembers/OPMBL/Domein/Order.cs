@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OPMBL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,17 @@ namespace OPMBL.Domein {
         public Member Member { get; set; }
         public List<OrderLine> OrderLines { get; set; } = new();
 
+        public Order(int id, DateTime orderDate, decimal ticketPrice, Member member)
+        {
+            Id = id;
+            OrderDate = orderDate;
+            TicketPrice = ticketPrice;
+            Member = member;
+        }
+
         public void AddOrderLine(OrderLine line) {
             OrderLines.Add(line);
         }
-
+        
     }
 }

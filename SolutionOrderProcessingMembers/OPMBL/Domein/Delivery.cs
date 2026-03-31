@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OPMBL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,15 @@ namespace OPMBL.Domein {
         public List<string> ExtraServices { get; set; }
 
         public Order Order { get; set; }
+
+        public Delivery(int id, Order order, IOrderStrategy strategy)
+        {
+            Id = id;
+            Order = order;
+            DeliveryType = strategy.GetDeliveryType();
+            IncludesWelcomePackage = strategy.HasWelcomePackage();
+            IncludesNameTag = strategy.HasNameTag();
+            ExtraServices = strategy.GetServices();
+        }
     }
 }
