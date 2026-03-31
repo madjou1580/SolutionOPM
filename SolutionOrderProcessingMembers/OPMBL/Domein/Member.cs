@@ -20,5 +20,12 @@ namespace OPMBL.Domein {
         public string Adress { get; set; }
         public MemberStatus Status { get; set; }
 
+        public Member(int id, string name, string email, string adress, MemberStatus status) {
+            Id = id;
+            Name = name;
+            Email = email;
+            Adress = adress;
+            Status = status;
+        }
     }
 }
