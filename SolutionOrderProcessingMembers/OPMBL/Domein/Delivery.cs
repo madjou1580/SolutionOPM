@@ -14,5 +14,18 @@ namespace OPMBL.Domein {
         public List<string> ExtraServices { get; set; }
 
         public Order Order { get; set; }
+<<<<<<< Updated upstream
+=======
+
+        public Delivery(int id, Order order, IOrderRepository strategy)
+        {
+            Id = id;
+            Order = order;
+            DeliveryType = strategy.GetDeliveryType();
+            IncludesWelcomePackage = strategy.HasWelcomePackage();
+            IncludesNameTag = strategy.HasNameTag();
+            ExtraServices = strategy.GetServices();
+        }
+>>>>>>> Stashed changes
     }
 }

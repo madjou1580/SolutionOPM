@@ -1,23 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
-namespace OPMBL.Interfaces {
-    public class BronzeStrategy : IOrderStrategy{
+//namespace OPMBL.Interfaces {
+//    public class BronzeStrategy : IOrderRepository{
 
-        public decimal CalculatePrice(decimal basePrice) => basePrice + 100;
+//        public decimal CalculatePrice(decimal basePrice) => basePrice + 100;
 
-        public string GetDeliveryType() => "Standard";
+//        public string GetDeliveryType() => "Standard";
 
-        public bool HasWelcomePackage() => false;
+//        public bool HasWelcomePackage() => false;
 
-        public bool HasNameTag() => true;
+//        public bool HasNameTag() => true;
 
-        public List<string> GetServices() {
-            return new List<string>();
-        }
+//        public List<string> GetServices() {
+//            return new List<string>();
+//        }
 
-    }
-}
+//    }
+//}
