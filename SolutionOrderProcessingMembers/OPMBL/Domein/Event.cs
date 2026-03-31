@@ -13,5 +13,12 @@ namespace OPMBL.Domein {
         public DateTime Date { get; set; }
         public decimal TicketPrice { get; set; }
 
+        public Event(int id, string name, string adress, DateTime date, decimal ticketPrice) {
+            Id = id;
+            Name = name;
+            Adress = adress;
+            Date = date;
+            TicketPrice = ticketPrice;
+        }
     }
 }

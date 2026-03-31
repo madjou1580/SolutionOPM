@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OPMBL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,15 @@ namespace OPMBL.Domein {
         public List<string> ExtraServices { get; set; }
 
         public Order Order { get; set; }
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 
         public Delivery(int id, Order order, IOrderRepository strategy)
+=======
+
+        public Delivery(int id, Order order, IOrderStrategy strategy)
+>>>>>>> main
         {
             Id = id;
             Order = order;
@@ -26,6 +32,9 @@ namespace OPMBL.Domein {
             IncludesNameTag = strategy.HasNameTag();
             ExtraServices = strategy.GetServices();
         }
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> main
     }
 }
