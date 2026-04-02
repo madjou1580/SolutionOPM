@@ -1,4 +1,5 @@
 ﻿using OPMBL.Domein;
+using OPMBL.Domein.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,10 +7,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace OPMBL.Interfaces {
-    public interface IOrderRepository {
+    public interface IRepository {
 
+        List<Member> GetMembers();
+        Member MemberLogin(string email);
         List<Event> GetEvents();
-        Member MemberLogin(string username);
+
+        void SaveOrder(Order order);
+        void SaveDelivery(DeliveryInfo delivery);
+
+        List<Order> GetOrders();
+        List<DeliveryInfo> GetDeliveries();
 
         //decimal CalculatePrice(decimal basePrice);
         //string GetDeliveryType();
