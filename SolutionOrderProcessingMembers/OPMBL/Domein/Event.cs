@@ -9,16 +9,20 @@ namespace OPMBL.Domein {
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Adress { get; set; }
+        public string Address { get; set; }
         public DateTime Date { get; set; }
         public decimal TicketPrice { get; set; }
 
-        public Event(int id, string name, string adress, DateTime date, decimal ticketPrice) {
+        public Event(int id, string name, string address, DateTime date, decimal ticketPrice) {
             Id = id;
             Name = name;
-            Adress = adress;
+            Address = address;
             Date = date;
             TicketPrice = ticketPrice;
+        }
+
+        public override string ToString() {
+            return $"{Name} - {Address} - {Date.ToShortDateString()} - €{TicketPrice}";
         }
     }
 }

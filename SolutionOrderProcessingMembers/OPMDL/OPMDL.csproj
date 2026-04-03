@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OPMBL\OPMBL.csproj" />
+  </ItemGroup>
+
 </Project>
