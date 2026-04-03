@@ -20,5 +20,9 @@ namespace OPMBL.Domein {
             Date = date;
             TicketPrice = ticketPrice;
         }
+
+        public override string ToString() {
+            return $"{Name} - {Address} - {Date.ToShortDateString()} - €{TicketPrice}";
+        }
     }
 }

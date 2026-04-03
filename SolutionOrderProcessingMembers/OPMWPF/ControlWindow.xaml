@@ -1,0 +1,39 @@
+﻿<Window x:Class="OPMWPF.ControlWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OPMWPF"
+        mc:Ignorable="d"
+        Title="Controle Scherm" Height="650" Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Controle Scherm"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   Margin="0,0,0,20"/>
+
+        <TabControl Grid.Row="1">
+            <TabItem Header="Members">
+                <DataGrid x:Name="dgMembers" AutoGenerateColumns="True" Margin="10"/>
+            </TabItem>
+
+            <TabItem Header="Events">
+                <DataGrid x:Name="dgEvents" AutoGenerateColumns="True" Margin="10"/>
+            </TabItem>
+
+            <TabItem Header="Orders">
+                <DataGrid x:Name="dgOrders" AutoGenerateColumns="True" Margin="10"/>
+            </TabItem>
+
+            <TabItem Header="Deliveries">
+                <DataGrid x:Name="dgDeliveries" AutoGenerateColumns="True" Margin="10"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -27,8 +27,8 @@ namespace OPMBL.Domein.Orders {
         public abstract bool HasNameTag();
         public abstract List<string> GetExtraServices();
 
-        public virtual void ProcessOrder() {
-            DeliveryMethod.Deliver(GetProducts());
+        public virtual string ProcessOrder() {
+            return DeliveryMethod.Deliver(GetProducts());
         }
 
     }

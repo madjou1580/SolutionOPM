@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace OPMBL.Interfaces {
     public interface IDelivery {
 
-        void Deliver(List<string> products);
+        string Deliver(List<string> products);
 
     }
 }

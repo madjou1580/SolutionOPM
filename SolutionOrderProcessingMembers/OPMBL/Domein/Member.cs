@@ -22,5 +22,9 @@ namespace OPMBL.Domein {
             Status = status;
         }
 
+        public override string ToString() {
+            return $"{Name} ({Status})";
+        }
+
     }
 }

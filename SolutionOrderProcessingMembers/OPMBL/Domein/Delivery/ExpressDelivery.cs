@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace OPMBL.Domein.Delivery {
     public class ExpressDelivery : IDelivery {
-        public void Deliver(List<string> products) {
-            Console.WriteLine("Express delivery:");
-            foreach (var p in products) Console.WriteLine(p);
+        public string Deliver(List<string> products) {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Express delivery:");
+            foreach (var p in products) {
+                sb.AppendLine($"- {p}");
+            }
+            return sb.ToString();
         }
     }
 }
